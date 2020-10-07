@@ -3,13 +3,16 @@ import "./Sidebar.css";
 import { useStateValue } from "./StateProvider";
 
 function Sidebar() {
-  const [{ basket }, dispatch] = useStateValue();
+  const [{ user }, dispatch] = useStateValue();
   const [name, setName] = useState("");
   const [id, setId] = useState("");
   const [age, setAge] = useState("");
   const [email, setEmail] = useState("");
 
   const handleClick = () => {
+    {
+      console.log("aaaaaaa>>>> " + user[user?.length]);
+    }
     dispatch({
       type: "ADD_TO_TABLE",
       member: {
@@ -30,6 +33,7 @@ function Sidebar() {
     <form>
       <div className="sidebar">
         <div className="sidebar__item>">
+          {console.log("halaaaaa" + user)}
           <p className="sidebar__title">Name</p>
           <input
             className="sidebar__input"

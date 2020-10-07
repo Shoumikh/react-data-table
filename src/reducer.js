@@ -1,6 +1,6 @@
 export const initialState = {
   students: [
-    { id: 1, name: "Wasif", age: 21, email: "wasif@email.com" },
+    { id: 1, name: "Wasif", phone: 21, email: "wasif@email.com" },
     { id: 2, name: "Ali", age: 19, email: "ali@email.com" },
     { id: 3, name: "Saad", age: 16, email: "saad@email.com" },
     { id: 4, name: "Asad", age: 25, email: "asad@email.com" },
@@ -19,7 +19,7 @@ const reducer = (state, action) => {
   switch (action.type) {
     case "ADD_TO_TABLE":
       //setting up unique id
-      state.students.map((member) => {
+      state.user.map((member) => {
         if (member.id === action.member.id) {
           sameId = false;
         }
@@ -27,11 +27,17 @@ const reducer = (state, action) => {
       if (sameId) {
         return {
           ...state, //whatever the state originally was
-          students: [...state.students, action.member], //..state.basket >> whatever basket currently was and whatever we decided to add
+          user: [...state.user, action.member], //..state.basket >> whatever basket currently was and whatever we decided to add
         };
       } else {
         alert("Id is taken. Try different Id");
       }
+
+    case "FETCH_DATA":
+      return {
+        ...state,
+        user: action.user,
+      };
 
     default:
       return state;

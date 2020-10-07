@@ -2,7 +2,6 @@ import React from "react";
 import Sidebar from "./Sidebar";
 import TableReact from "./TableReact";
 import "./Home.css";
-import Table from "./Table";
 
 function Home() {
   return (
