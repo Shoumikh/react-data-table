@@ -1,0 +1,26 @@
+.home {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.home > h1 {
+    padding: 5px 100%;
+    background-color:  #4caf50;
+}
+.home__container {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.home__sidebar {
+  flex-grow: 1;
+}
+
+.home__tableReact {
+  padding: 0px 20px;
+  flex-grow: 10;
+}
