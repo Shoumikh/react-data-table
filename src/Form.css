@@ -8,7 +8,6 @@ form {
   flex-direction: column;
   align-items: stretch;
   background-color: lightgreen;
-  margin: 0px 20px;
   width: 100%;
   border: 3px solid #ddd;
   padding: 20px 10%;
@@ -40,10 +39,8 @@ form {
   align-items: flex-start;
   padding-bottom: 10px;
   padding-right: 10px;
-
-  color: #4caf50;
+  color: black;
   margin-bottom: 5px;
-  font-weight: 700;
   text-transform: uppercase;
 }
 
